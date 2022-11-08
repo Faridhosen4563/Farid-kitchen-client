@@ -1,0 +1,92 @@
+[
+    {
+        "name" : "Achari Chicken",
+        "img" : "https://i.ibb.co/r2ZWvWM/Achari-Murg-3-of-4.jpg",
+        "price" : 250,
+        "description" : "In a heavy bottom sauce pan heat the mustard oil. Add the fenugreek seeds, mustard seeds, cumin seeds, fennel seeds and nigella seeds. Sauté until they start to sizzle and pop for a min or so. Also add the whole red chillies, stirring to make sure they don’t burn. Add the sliced onion and fry until light brown in colour and have softened for about 8-10 mins. To the pan now add the ginger/ garlic paste frying for a few seconds. Mix well. Stir in the tomato puree, turmeric powder and chilli powder. Cook for a couple of minutes till the oil leaves the sides of the pan.",
+        "rating" : 4.6,
+        "Delivery_time" : "30 min"
+
+    },
+    {
+        "name" : "Chicken Roast",
+        "img" : "https://i.ibb.co/bQGGDxt/chiken-roast.png",
+        "price" : 220,
+        "description" : "Remove the chicken giblets. Rinse the chicken inside and out. Remove any excess fat and leftover pin feathers and pat the outside dry. Liberally salt and pepper the inside of the chicken. Stuff the cavity with the bunch of thyme, both halves of lemon, and all the garlic. Brush the outside of the chicken with the butter and sprinkle again with salt and pepper. Tie the legs together with kitchen string and tuck the wing tips under the body of the chicken. Place the onions, carrots, and fennel in a roasting pan. Toss with salt, pepper, 20 sprigs of thyme, and olive oil. Spread around the bottom of the roasting pan and place the chicken on top.",
+        "rating" : 4.5,
+        "Delivery_time" : "35 min"
+
+    },
+    {
+        "name" : "Fish Curry",
+        "img" : "https://i.ibb.co/kGHzzZs/fish-curry.jpg",
+        "price" : 200,
+        "description" : "Combine fish, salt, chile powder, and turmeric in a medium bowl and, using your hands, gently toss fish to evenly coat in spices. Heat oil in a large nonstick skillet over medium-high. Working in batches to avoid crowding, cook fish pieces until lightly browned, about 2 minutes per side (the fish won’t be cooked all the way through). Transfer fish to a plate. CURRY AND ASSEMBLY. Heat grapeseed oil in a medium Dutch oven or other heavy pot over medium-high. Add a few mustard seeds to pot. When seeds start to wiggle and pop, reduce heat to medium and add curry leaves (if using), asafetida (if using), and remaining mustard seeds. Cover pot and cook spices, swirling, until mustard seeds start popping more gradually, about 30 seconds. Uncover pot and return heat to medium-high. Add ginger and garlic and cook, stirring constantly, until beginning to brown, about 1 minute. Add chopped onion and a big pinch of salt and cook, stirring often and reducing heat if needed to prevent burning, until onion is golden brown and jammy, 7–9 minutes.",
+        "rating" : 4.2,
+        "Delivery_time" : "35 min"
+
+    },
+    {
+        "name" : "Kusha Murgi",
+        "img" : "https://i.ibb.co/cQnbjFk/Kusha-Murgi-800x475.png",
+        "price" : 270,
+        "description" : "To begin making Bengali Kosha Murgir Mangsho Recipe (Chicken in a Spicy Dry Gravy), using a sharp knife, make 3-4 deep slits on each of the chicken drumsticks.Marinate the chicken in a big mixing bowl with ginger paste, garlic paste, whipped yogurt, red chilli powder, turmeric powder, 1 tablespoon mustard oil, a little salt and keep aside for at least 3-4 hours. (The longer the better)Heat about 2 tablespoons of mustard oil in a thick bottomed pan, when oil is smoking hot, throw in the cinnamon, cardamom, cloves and bay leaves. Allow the whole spices to splutter and release their aroma.Now add the sliced onions, fry till they are golden brown and caramelized.Add the marinated chicken along with the marinade. Cook over a low flame, covered, till the masala comes together and is almost cooked.Add about 1/2 a cup of warm water, give it a hearty stir and continue to cook till the chicken is tender and the gravy is of a coating consistency.Finish with a sprinkle of garam masala powder and a quick stir till evenly combined. Turn off he heat,Your Kosha Mangsho Murgir is ready to be served,",
+        "rating" : 4.7,
+        "Delivery_time" : "35 min"
+
+    },
+    {
+        "name" : "Biriyani",
+        "img" : "https://i.ibb.co/2gj0rd2/biriyani-3-970x647.jpg",
+        "price" : 320,
+        "description" : "STEP 1 Soak 300g basmati rice in warm water, then wash in cold until the water runs clear.STEP 2Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins.STEP 3Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic.STEP 4 Stir the rice into the pan with 85g raisins, then pour over 850ml chicken stock.STEP 5Place a tight-fitting lid on the pan and bring to a hard boil, then lower the heat to a minimum and cook the rice for another 5 mins. STEP 6 Turn off the heat and leave for 10 mins. Stir well, mixing through 15g chopped coriander. To serve, scatter over the leaves of the remaining 15g coriander and 2 tbsp toasted almonds.",
+        "rating" : 4.9,
+        "Delivery_time" : "35 min"
+
+    },
+    {
+        "name" : "Kala Vuna",
+        "img" : "https://i.ibb.co/KFYrFYM/kala-vuna.jpg",
+        "price" : 350,
+        "description" : "Add oil, meat, salt , red chili powder , turmeric powder, coriander , garlic ginger paste , sliced onion , green chili, mustard oil , dark soy sauce , mace , cinnamon , cardamom , cloves , black pepper, bay leaves , plain yogurt and 1 tsp sugar  and saute for 5-10 min. Then add fried onion and cover it to cook for 3 hrs or you can put them inside a pressure cooker and cook for 20-30 min.  Once cooked then keep stirring until all water dries up. ",
+        "rating" : 4.9,
+        "Delivery_time" : "40 min"
+
+    },
+    {
+        "name" : "Beef Vuna",
+        "img" : "https://i.ibb.co/3ccY0Qm/beef-vuna.jpg",
+        "price" : 320,
+        "description" : "Add oil, meat, salt , red chili powder , turmeric powder, coriander , garlic ginger paste , sliced onion , green chili, mustard oil , dark soy sauce , mace , cinnamon , cardamom , cloves , black pepper, bay leaves , plain yogurt and 1 tsp sugar  and saute for 5-10 min. Then add fried onion and cover it to cook for 3 hrs or you can put them inside a pressure cooker and cook for 20-30 min.  Once cooked then keep stirring until all water dries up. ",
+        "rating" : 4.3,
+        "Delivery_time" : "35 min"
+
+    },
+    {
+        "name" : "Sorisha Ilis",
+        "img" : "https://i.ibb.co/MhKFrfx/sorisha-ilis.jpg",
+        "price" : 320,
+        "description" : "Shorshe Ilish aka Shorshe Bata diye Ilish Macher Jhal is a famous Bengali delicacy where Hilsa Fish is cooked in a Mustard Gravy. Before going further with the recipe of Shorshe Ilish, let's talk about responsible eating. Ilish Maach aka Hilsa is famous across the border of both sides of Bengal and needless to say Bangli's love for Ilish is as famous as the fish itself. With love comes responsibility and it is our responsibility to support responsible eating of HilsaWe must remember our favorite Hilsa is in danger. Let us say no to Khoka Ilish ( fish size below 600g); we must save the small so that our future generation can at least taste and realize how beautiful Ilish is. Let us restrict ourselves from purchasing Ilish Maach beyond the rainy reason! ",
+        "rating" : 4.7,
+        "Delivery_time" : "30 min"
+
+    },
+    {
+        "name" : "Fish Pie",
+        "img" : "https://i.ibb.co/w4WcTLf/fish-pie.jpg",
+        "price" : 200,
+        "description" : "01.Put the potatoes in a large pan of cold salted water and bring to the boil. Lower the heat, cover, then simmer gently for 15 minutes until tender. Drain, then return to the pan over a low heat for 30 seconds to drive off any excess water. Mash with 1 tbsp olive oil, then season.\r\n02.Meanwhile put the milk in a large sauté pan, add the fish and bring to the boil. Remove from the heat, cover and stand for 3 minutes. Remove the fish (reserving the milk) and pat dry with kitchen paper, then gently flake into an ovenproof dish, discarding the skin and any bones.\r\n03.Heat the remaining oil in a pan, stir in the flour and cook for 30 seconds. Gradually stir in 200-250ml of the reserved milk (discard the rest). Grate in nutmeg, season, then bubble until thick. Stir in the cream.\r\n04.Preheat the oven to 190°C/fan170°C/gas 5. Grate the artichokes and add to the dish with the leek, prawns and herbs. Stir the lemon zest and juice into the sauce, then pour over. Mix gently with a wooden spoon.\r\n05.Spoon the mash onto the fish mixture, then use a fork to make peaks, which will crisp and brown as it cooks. Sprinkle over the cheese, then bake for 35-40 minutes until golden and bubbling. Serve with wilted greens.",
+        "rating" : 3.7,
+        "Delivery_time" : "30 min"
+
+    }
+]
+
+
+
+
+
+
+
+
+
