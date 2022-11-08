@@ -1,8 +1,9 @@
 import React from "react";
 import { FaStar, FaClock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { img, description, name, price, rating, Delivery_time } = service;
+  const { _id, img, description, name, price, rating, Delivery_time } = service;
   return (
     <div className="flex flex-col md:flex-row border-2 border-orange-500 p-4 rounded-lg my-6">
       <figure>
@@ -25,7 +26,9 @@ const Service = ({ service }) => {
           </div>
         </div>
         <div className="w-1/3 mx-auto my-4">
-          <button className="btn btn-outline btn-error ">View Details</button>
+          <Link to={`/services/${_id}`}>
+            <button className="btn btn-outline btn-error ">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

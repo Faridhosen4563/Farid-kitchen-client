@@ -7,6 +7,9 @@ const Headers = () => {
       <li className="text-xl font-semibold">
         <Link to="/">Home</Link>
       </li>
+      <li className="text-xl font-semibold">
+        <Link to="/login">Log In</Link>
+      </li>
     </>
   );
   return (

@@ -1,9 +1,10 @@
 import React from "react";
 import { FaClock, FaStar } from "react-icons/fa";
 import { PhotoView, PhotoProvider } from "react-photo-view";
+import { Link } from "react-router-dom";
 
 const ServicesCard = ({ service }) => {
-  const { img, description, name, price, rating, Delivery_time } = service;
+  const { _id, img, description, name, price, rating, Delivery_time } = service;
   return (
     <div className="card w-full bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
@@ -25,10 +26,12 @@ const ServicesCard = ({ service }) => {
             ? description.slice(0, 200) + "..."
             : description}
         </p>
-        <div className="card-actions w-full">
-          <button className="btn btn-outline btn-success w-full">
-            View Details
-          </button>
+        <div className="card-actions">
+          <Link to={`/services/${_id}`} className="w-full">
+            <button className="btn btn-outline btn-success w-full">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
