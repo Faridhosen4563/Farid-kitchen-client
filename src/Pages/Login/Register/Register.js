@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 
 const Register = () => {
   const [error, setError] = useState(null);
-  const { createUser } = useContext(AuthContext);
+  const { createUser, googleSigIn } = useContext(AuthContext);
   const handleSubmit = (event) => {
     setError(" ");
     event.preventDefault();
@@ -45,6 +45,26 @@ const Register = () => {
         console.error(error);
       });
   };
+
+  const handleGoogle = () => {
+    googleSigIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Register Success",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.error(error);
+      });
+  };
+
   return (
     <div className="hero my-20">
       <div className="hero-content grid md:grid-cols-2 gap-4">
@@ -144,7 +164,7 @@ const Register = () => {
             <p className="text-center text-xl font-semibold">Or</p>
             <hr />
             <div className="flex justify-evenly">
-              <button>
+              <button onClick={handleGoogle}>
                 <img src={googleLogo} alt="" />
               </button>
               <button>
