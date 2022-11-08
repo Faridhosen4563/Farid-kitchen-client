@@ -5,7 +5,7 @@ const Headers = () => {
   const menuItem = (
     <>
       <li className="text-xl font-semibold">
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
       </li>
     </>
   );
