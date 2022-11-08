@@ -1,5 +1,6 @@
 import React from "react";
 import { FaClock, FaStar } from "react-icons/fa";
+import { PhotoView, PhotoProvider } from "react-photo-view";
 
 const ServicesCard = ({ service }) => {
   const { img, description, name, price, rating, Delivery_time } = service;
@@ -19,10 +20,14 @@ const ServicesCard = ({ service }) => {
             <FaClock /> {Delivery_time}
           </div>
         </div>
-        <p>{description}</p>
+        <p>
+          {description.length > 200
+            ? description.slice(0, 200) + "..."
+            : description}
+        </p>
         <div className="card-actions w-full">
           <button className="btn btn-outline btn-success w-full">
-            Check Review
+            View Details
           </button>
         </div>
       </div>

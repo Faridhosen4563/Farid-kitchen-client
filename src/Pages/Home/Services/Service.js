@@ -24,6 +24,9 @@ const Service = ({ service }) => {
             <FaClock /> {Delivery_time}
           </div>
         </div>
+        <div className="w-1/3 mx-auto my-4">
+          <button className="btn btn-outline btn-error ">View Details</button>
+        </div>
       </div>
     </div>
   );
