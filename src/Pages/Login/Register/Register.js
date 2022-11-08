@@ -7,6 +7,7 @@ import googleLogo from "../../../assets/image/login/icons8-google (1).svg";
 import gitHubLogo from "../../../assets/image/login/icons8-github.svg";
 import facebookLogo from "../../../assets/image/login/icons8-facebook.svg";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [error, setError] = useState(null);
@@ -30,6 +31,14 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Register Success",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+        form.reset();
       })
       .catch((error) => {
         setError(error.message);
@@ -147,7 +156,7 @@ const Register = () => {
             </div>
             <div className="text-center my-6">
               <p>
-                Don't have an account? Please{" "}
+                Already have an account? Please{" "}
                 <Link to="/login" className="text-orange-400">
                   LogIn
                 </Link>
