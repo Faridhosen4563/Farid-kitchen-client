@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 
 const Register = () => {
   const [error, setError] = useState(null);
-  const { createUser, googleSigIn } = useContext(AuthContext);
+  const { createUser, googleSigIn, gitHubSignIn } = useContext(AuthContext);
   const handleSubmit = (event) => {
     setError(" ");
     event.preventDefault();
@@ -54,7 +54,26 @@ const Register = () => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Register Success",
+          title: "Sign Up Success",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.error(error);
+      });
+  };
+
+  const handleGitHub = () => {
+    gitHubSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Sign Up Success",
           showConfirmButton: false,
           timer: 1000,
         });
@@ -167,7 +186,7 @@ const Register = () => {
               <button onClick={handleGoogle}>
                 <img src={googleLogo} alt="" />
               </button>
-              <button>
+              <button onClick={handleGitHub}>
                 <img src={gitHubLogo} alt="" />
               </button>
               <button>
