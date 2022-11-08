@@ -6,6 +6,7 @@ import {
   signInWithPopup,
   GithubAuthProvider,
   FacebookAuthProvider,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 
@@ -34,11 +35,16 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, faceBookProvider);
   };
 
+  const logIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
   const authInfo = {
     createUser,
     googleSigIn,
     gitHubSignIn,
     facebookSignIn,
+    logIn,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

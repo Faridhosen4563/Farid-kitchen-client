@@ -51,6 +51,7 @@ const Register = () => {
     googleSigIn()
       .then((result) => {
         const user = result.user;
+        setError(" ");
         console.log(user);
         Swal.fire({
           position: "center",
@@ -70,6 +71,7 @@ const Register = () => {
     gitHubSignIn()
       .then((result) => {
         const user = result.user;
+        setError(" ");
         console.log(user);
         Swal.fire({
           position: "center",
@@ -89,6 +91,7 @@ const Register = () => {
     facebookSignIn()
       .then((result) => {
         const user = result.user;
+        setError(" ");
         console.log(user);
         Swal.fire({
           position: "center",
