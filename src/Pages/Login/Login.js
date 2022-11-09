@@ -9,6 +9,7 @@ import facebookLogo from "../../assets/image/login/icons8-facebook.svg";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import useTitle from "../../hooks/useTitle";
+import { setAuthToken } from "../../TokenSet/TokenSet";
 
 const Login = () => {
   const { logIn, googleSigIn, gitHubSignIn, facebookSignIn } =
@@ -31,9 +32,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setError("");
-        console.log(user);
+
         toast.success("Successfully Log In");
         form.reset();
+
+        setAuthToken(user);
+
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -47,8 +51,8 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setError("");
-        console.log(user);
         toast.success("Successfully Log In");
+        setAuthToken(user);
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -62,7 +66,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setError("");
-        console.log(user);
+        setAuthToken(user);
         toast.success("Successfully Log In");
         navigate(from, { replace: true });
       })
@@ -77,7 +81,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setError("");
-        console.log(user);
+        setAuthToken(user);
         toast.success("Successfully Log In");
         navigate(from, { replace: true });
       })

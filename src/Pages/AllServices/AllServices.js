@@ -8,6 +8,7 @@ const AllServices = () => {
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(6);
+  const [spinner, setSpinner] = useState(true);
 
   const pages = Math.ceil(count / size);
 
@@ -17,9 +18,14 @@ const AllServices = () => {
       .then((data) => {
         setCount(data.count);
         setServices(data.services);
+        setSpinner(false);
         console.log(data);
       });
   }, [page, size]);
+
+  if (spinner) {
+    return <progress className="progress w-full"></progress>;
+  }
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12">

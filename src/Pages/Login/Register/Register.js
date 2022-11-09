@@ -10,6 +10,7 @@ import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import useTitle from "../../../hooks/useTitle";
+import { setAuthToken } from "../../../TokenSet/TokenSet";
 
 const Register = () => {
   useTitle("Register");
@@ -34,7 +35,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        setAuthToken(user);
         Swal.fire({
           position: "center",
           icon: "success",
@@ -56,7 +57,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setError(" ");
-        console.log(user);
+        setAuthToken(user);
         Swal.fire({
           position: "center",
           icon: "success",
@@ -76,7 +77,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setError(" ");
-        console.log(user);
+        setAuthToken(user);
         Swal.fire({
           position: "center",
           icon: "success",
@@ -96,7 +97,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setError(" ");
-        console.log(user);
+        setAuthToken(user);
         Swal.fire({
           position: "center",
           icon: "success",
