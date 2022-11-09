@@ -9,8 +9,10 @@ import facebookLogo from "../../../assets/image/login/icons8-facebook.svg";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
+import useTitle from "../../../hooks/useTitle";
 
 const Register = () => {
+  useTitle("Register");
   const [error, setError] = useState(null);
   const { createUser, googleSigIn, gitHubSignIn, facebookSignIn, updateInfo } =
     useContext(AuthContext);

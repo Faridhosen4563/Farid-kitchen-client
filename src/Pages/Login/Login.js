@@ -8,11 +8,13 @@ import gitHubLogo from "../../assets/image/login/icons8-github.svg";
 import facebookLogo from "../../assets/image/login/icons8-facebook.svg";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
   const { logIn, googleSigIn, gitHubSignIn, facebookSignIn } =
     useContext(AuthContext);
   const [error, setError] = useState(null);
+  useTitle("Login");
 
   const navigate = useNavigate();
   const location = useLocation();
