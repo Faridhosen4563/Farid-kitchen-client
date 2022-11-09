@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../Pages/Sheared/Footer";
 import Headers from "../Pages/Sheared/Headers";
 
 const Main = () => {
@@ -7,6 +8,7 @@ const Main = () => {
     <div>
       <Headers></Headers>
       <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   );
 };

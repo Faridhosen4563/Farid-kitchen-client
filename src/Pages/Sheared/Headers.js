@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
+import logo from "../../assets/logo.png";
 
 const Headers = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,30 +17,30 @@ const Headers = () => {
 
   const menuItem = (
     <>
-      <li className="text-xl font-semibold">
+      <li className="text-xl font-normal">
         <Link to="/">Home</Link>
       </li>
       {user?.email ? (
         <>
-          <li className="text-xl font-semibold">
+          <li className="text-xl font-normal">
             <Link to="/myreview">My Reviews</Link>
           </li>
-          <li className="text-xl font-semibold">
+          <li className="text-xl font-normal">
             <Link to="/addservice">Add service</Link>
           </li>
-          <li className="text-xl font-semibold">
+          <li className="text-xl font-normal">
             <Link onClick={handleLogOut}>Log Out</Link>
           </li>
         </>
       ) : (
-        <li className="text-xl font-semibold">
+        <li className="text-xl font-normal">
           <Link to="/login">Log In</Link>
         </li>
       )}
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 h-20 py-10">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -65,7 +66,12 @@ const Headers = () => {
             {menuItem}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link>
+          <div className="flex justify-center items-center">
+            <img src={logo} alt="logo" className="h-20 w-20" />
+            <p className="font-medium text-2xl">Farid Kitchen</p>
+          </div>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItem}</ul>
