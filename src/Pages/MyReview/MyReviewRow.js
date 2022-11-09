@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MyReviewRow = ({ review, handleDelete }) => {
   const [product, setProduct] = useState({});
@@ -54,7 +55,9 @@ const MyReviewRow = ({ review, handleDelete }) => {
       </td>
       <td>{message}</td>
       <th>
-        <button className="btn btn-outline">Update</button>
+        <Link to={`/update/${_id}`}>
+          <button className="btn btn-outline">Update</button>
+        </Link>
       </th>
     </tr>
   );
