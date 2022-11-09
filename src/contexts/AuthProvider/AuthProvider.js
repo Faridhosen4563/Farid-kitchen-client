@@ -53,6 +53,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
+    localStorage.removeItem("kitchenToken");
     return signOut(auth);
   };
 

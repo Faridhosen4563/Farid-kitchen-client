@@ -14,6 +14,7 @@ const Update = () => {
       method: "PUT",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("kitchenToken")}`,
       },
       body: JSON.stringify(updateReview),
     })

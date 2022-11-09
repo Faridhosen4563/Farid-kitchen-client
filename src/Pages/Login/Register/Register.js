@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaEye, FaLock, FaUser } from "react-icons/fa";
 import { HiMail, HiPhotograph } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../assets/image/login/register.png";
 import googleLogo from "../../../assets/image/login/icons8-google (1).svg";
 import gitHubLogo from "../../../assets/image/login/icons8-github.svg";
@@ -17,6 +17,9 @@ const Register = () => {
   const [error, setError] = useState(null);
   const { createUser, googleSigIn, gitHubSignIn, facebookSignIn, updateInfo } =
     useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
   const handleSubmit = (event) => {
     setError(" ");
     event.preventDefault();
@@ -45,6 +48,7 @@ const Register = () => {
         });
         updateUserInfo(name, photoUrl);
         form.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -65,6 +69,7 @@ const Register = () => {
           showConfirmButton: false,
           timer: 1000,
         });
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -85,6 +90,7 @@ const Register = () => {
           showConfirmButton: false,
           timer: 1000,
         });
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -105,6 +111,7 @@ const Register = () => {
           showConfirmButton: false,
           timer: 1000,
         });
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
