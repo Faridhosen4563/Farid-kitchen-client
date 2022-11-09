@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
+import Review from "../Review/Review";
 
 const Details = () => {
   const { user } = useContext(AuthContext);
+  const [reviews, setReviews] = useState([]);
+  const [insetId, setInsetId] = useState(null);
   const serviceDetails = useLoaderData();
   const { _id, img, description, name, price, rating, Delivery_time } =
     serviceDetails;
@@ -44,8 +47,18 @@ const Details = () => {
           form.reset();
           console.log(data);
         }
+        setInsetId(data.insertedId);
       });
   };
+
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setReviews(data);
+      });
+  }, [insetId]);
 
   return (
     <div>
@@ -70,6 +83,11 @@ const Details = () => {
         <hr />
         <h1 className="text-2xl font-semibold">Review :</h1>
         <hr />
+        <div className="my-12">
+          {reviews.map((review) => (
+            <Review key={review._id} review={review}></Review>
+          ))}
+        </div>
         <div>
           {user?.email ? (
             <form onSubmit={handleSubmit} className="my-6">
