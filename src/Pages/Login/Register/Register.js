@@ -8,10 +8,11 @@ import gitHubLogo from "../../../assets/image/login/icons8-github.svg";
 import facebookLogo from "../../../assets/image/login/icons8-facebook.svg";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [error, setError] = useState(null);
-  const { createUser, googleSigIn, gitHubSignIn, facebookSignIn } =
+  const { createUser, googleSigIn, gitHubSignIn, facebookSignIn, updateInfo } =
     useContext(AuthContext);
   const handleSubmit = (event) => {
     setError(" ");
@@ -39,6 +40,7 @@ const Register = () => {
           showConfirmButton: false,
           timer: 1000,
         });
+        updateUserInfo(name, photoUrl);
         form.reset();
       })
       .catch((error) => {
@@ -100,6 +102,22 @@ const Register = () => {
           showConfirmButton: false,
           timer: 1000,
         });
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.error(error);
+      });
+  };
+
+  const updateUserInfo = (name, photoUrl) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoUrl,
+    };
+
+    updateInfo(profile)
+      .then(() => {
+        toast.success("update successfully");
       })
       .catch((error) => {
         setError(error.message);
