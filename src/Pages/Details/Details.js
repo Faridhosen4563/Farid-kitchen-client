@@ -80,6 +80,7 @@ const Details = () => {
             </div>
           </div>
         </div>
+        ;
         <hr />
         <h1 className="text-2xl font-semibold">Review :</h1>
         <hr />

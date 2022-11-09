@@ -22,7 +22,7 @@ const Headers = () => {
       {user?.email ? (
         <>
           <li className="text-xl font-semibold">
-            <Link to="/login">My Reviews</Link>
+            <Link to="/myreview">My Reviews</Link>
           </li>
           <li className="text-xl font-semibold">
             <Link to="/login">Add service</Link>

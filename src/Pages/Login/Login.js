@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaEye, FaLock } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/image/login/login.png";
 import googleLogo from "../../assets/image/login/icons8-google (1).svg";
 import gitHubLogo from "../../assets/image/login/icons8-github.svg";
@@ -13,6 +13,11 @@ const Login = () => {
   const { logIn, googleSigIn, gitHubSignIn, facebookSignIn } =
     useContext(AuthContext);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,6 +32,7 @@ const Login = () => {
         console.log(user);
         toast.success("Successfully Log In");
         form.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -41,6 +47,7 @@ const Login = () => {
         setError("");
         console.log(user);
         toast.success("Successfully Log In");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -55,6 +62,7 @@ const Login = () => {
         setError("");
         console.log(user);
         toast.success("Successfully Log In");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -69,6 +77,7 @@ const Login = () => {
         setError("");
         console.log(user);
         toast.success("Successfully Log In");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
