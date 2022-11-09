@@ -20,6 +20,9 @@ const Headers = () => {
       <li className="text-xl font-normal">
         <Link to="/">Home</Link>
       </li>
+      <li className="text-xl font-normal">
+        <Link to="/blog">Blog</Link>
+      </li>
       {user?.email ? (
         <>
           <li className="text-xl font-normal">
