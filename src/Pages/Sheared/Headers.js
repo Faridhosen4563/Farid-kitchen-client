@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
@@ -70,7 +71,16 @@ const Headers = () => {
         <ul className="menu menu-horizontal p-0">{menuItem}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Get started</a>
+        {user?.photoURL ? (
+          <img
+            src={user.photoURL}
+            alt=""
+            referrerPolicy="no-referrer"
+            className="h-12 w-12 rounded-full"
+          />
+        ) : (
+          <FaUser></FaUser>
+        )}
       </div>
     </div>
   );
