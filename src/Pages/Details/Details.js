@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
@@ -38,7 +39,11 @@ const Details = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.acknowledged) {
+          toast.success("Review add successfully");
+          form.reset();
+          console.log(data);
+        }
       });
   };
 
@@ -67,9 +72,9 @@ const Details = () => {
         <hr />
         <div>
           {user?.email ? (
-            <form className="my-6">
+            <form onSubmit={handleSubmit} className="my-6">
               <h2>Add your review : </h2>
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6 my-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <input
                   type="text"
                   name="name"
