@@ -52,7 +52,7 @@ const Details = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch(`http://localhost:5000/reviews/${_id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
