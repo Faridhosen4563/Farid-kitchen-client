@@ -14,7 +14,7 @@ const Services = () => {
       <h1 className="text-3xl font-bold text-green-600 mb-8">
         My Popular Food
       </h1>
-      <div className=" border-2 border-orange-500 p-4 rounded-lg">
+      <div className=" border-2 border-gray-400 p-4 rounded-lg">
         <div className="text-center">
           <p className="text-2xl font-semibold text-red-500 mb-4">
             Food Delivery

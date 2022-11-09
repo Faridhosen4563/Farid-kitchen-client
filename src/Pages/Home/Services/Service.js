@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Service = ({ service }) => {
   const { _id, img, description, name, price, rating, Delivery_time } = service;
   return (
-    <div className="flex flex-col md:flex-row border-2 border-orange-500 p-4 rounded-lg my-6">
+    <div className="flex flex-col md:flex-row border-2 border-gray-400 p-4 rounded-lg my-6">
       <PhotoProvider>
         <PhotoView src={img}>
           <figure>
