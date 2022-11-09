@@ -1,15 +1,20 @@
 import React from "react";
 import { FaClock, FaStar } from "react-icons/fa";
 import { PhotoView, PhotoProvider } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 import { Link } from "react-router-dom";
 
 const ServicesCard = ({ service }) => {
   const { _id, img, description, name, price, rating, Delivery_time } = service;
   return (
     <div className="card w-full bg-base-100 shadow-xl">
-      <figure className="px-10 pt-10">
-        <img src={img} alt={name} className="h-72 w-96 rounded-lg" />
-      </figure>
+      <PhotoProvider>
+        <PhotoView src={img}>
+          <figure className="px-10 pt-10">
+            <img src={img} alt={name} className="h-72 w-96 rounded-lg" />
+          </figure>
+        </PhotoView>
+      </PhotoProvider>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <p>Price : ${price}</p>
