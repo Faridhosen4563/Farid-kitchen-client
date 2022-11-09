@@ -25,7 +25,7 @@ const Headers = () => {
             <Link to="/myreview">My Reviews</Link>
           </li>
           <li className="text-xl font-semibold">
-            <Link to="/login">Add service</Link>
+            <Link to="/addservice">Add service</Link>
           </li>
           <li className="text-xl font-semibold">
             <Link onClick={handleLogOut}>Log Out</Link>
