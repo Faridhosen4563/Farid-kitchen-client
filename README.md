@@ -1,5 +1,7 @@
 * Name : Farid Kitchen
 * Live Link : https://assigment-11-client-site.web.app/
+* Client code : https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Faridhosen4563
+* Server code : https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Faridhosen4563
 
  Features :
  
