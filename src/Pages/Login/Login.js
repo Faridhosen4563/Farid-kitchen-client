@@ -38,9 +38,7 @@ const Login = () => {
 
         toast.success("Successfully Log In");
         form.reset();
-
         setAuthToken(user);
-
         navigate(from, { replace: true });
       })
       .catch((error) => {

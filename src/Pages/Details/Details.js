@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import Review from "../Review/Review";
 
@@ -9,6 +9,7 @@ const Details = () => {
   const [reviews, setReviews] = useState([]);
   const [insetId, setInsetId] = useState(null);
   const serviceDetails = useLoaderData();
+  const location = useLocation();
   const { _id, img, description, name, price, rating, Delivery_time } =
     serviceDetails;
 
@@ -132,7 +133,12 @@ const Details = () => {
           ) : (
             <p className="text-2xl font-semibold text-center my-4">
               Please{" "}
-              <Link to="/login" className="text-orange-500">
+              <Link
+                to="/login"
+                state={{ from: location }}
+                replace
+                className="text-orange-500"
+              >
                 Login
               </Link>
             </p>
