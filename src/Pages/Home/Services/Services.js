@@ -5,14 +5,14 @@ import Service from "./Service";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services?limit=3")
+    fetch("https://farid-kitchen-server-site.vercel.app/services?limit=3")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   return (
     <div className="my-12">
       <h1 className="text-3xl font-bold text-green-600 mb-8">
-        My Popular Food
+        My Popular Food Delivery
       </h1>
       <div className=" border-2 border-gray-400 p-4 rounded-lg">
         <div className="text-center">

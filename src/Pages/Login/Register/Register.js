@@ -15,12 +15,14 @@ import { setAuthToken } from "../../../TokenSet/TokenSet";
 const Register = () => {
   useTitle("Register");
   const [error, setError] = useState(null);
+  const [spinner, setSpinner] = useState(false);
   const { createUser, googleSigIn, gitHubSignIn, facebookSignIn, updateInfo } =
     useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
   const handleSubmit = (event) => {
+    setSpinner(true);
     setError(" ");
     event.preventDefault();
     const form = event.target;
@@ -32,12 +34,14 @@ const Register = () => {
     console.log(name, photoUrl, email, password, confirm);
 
     if (password !== confirm) {
+      setSpinner(false);
       return setError("Password does not match");
     }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
+        setSpinner(false);
         setAuthToken(user);
         Swal.fire({
           position: "center",
@@ -51,6 +55,7 @@ const Register = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
+        setSpinner(false);
         setError(error.message);
         console.error(error);
       });
@@ -134,6 +139,9 @@ const Register = () => {
         console.error(error);
       });
   };
+  if (spinner) {
+    return <progress className="progress w-full"></progress>;
+  }
 
   return (
     <div className="hero my-20">

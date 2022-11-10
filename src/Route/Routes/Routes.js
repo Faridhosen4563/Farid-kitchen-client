@@ -30,12 +30,15 @@ export const router = createBrowserRouter([
         path: "/services/:id",
         element: <Details></Details>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(
+            `https://farid-kitchen-server-site.vercel.app/services/${params.id}`
+          ),
       },
       {
         path: "/blog",
         element: <Blog></Blog>,
-        loader: () => fetch("http://localhost:5000/blog"),
+        loader: () =>
+          fetch("https://farid-kitchen-server-site.vercel.app/blog"),
       },
       {
         path: "/login",
@@ -61,7 +64,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.id}`),
+          fetch(
+            `https://farid-kitchen-server-site.vercel.app/review/${params.id}`
+          ),
       },
       {
         path: "/addservice",

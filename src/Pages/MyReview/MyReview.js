@@ -9,11 +9,14 @@ const MyReview = () => {
   const { user, logOut } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("kitchenToken")}`,
-      },
-    })
+    fetch(
+      `https://farid-kitchen-server-site.vercel.app/reviews?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("kitchenToken")}`,
+        },
+      }
+    )
       .then((res) => {
         if (res.status === 401 || res.status === 403) {
           return logOut();
@@ -38,7 +41,7 @@ const MyReview = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://farid-kitchen-server-site.vercel.app/reviews/${id}`, {
           method: "DELETE",
           headers: {
             authorization: `Bearer ${localStorage.getItem("kitchenToken")}`,

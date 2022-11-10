@@ -15,6 +15,7 @@ const Login = () => {
   const { logIn, googleSigIn, gitHubSignIn, facebookSignIn } =
     useContext(AuthContext);
   const [error, setError] = useState(null);
+  const [spinner, setSpinner] = useState(false);
   useTitle("Login");
 
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (event) => {
+    setSpinner(true);
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
@@ -31,6 +33,7 @@ const Login = () => {
     logIn(email, password)
       .then((result) => {
         const user = result.user;
+        setSpinner(false);
         setError("");
 
         toast.success("Successfully Log In");
@@ -42,6 +45,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message);
+        setSpinner(false);
         console.error(error);
       });
   };
@@ -90,6 +94,9 @@ const Login = () => {
         console.error(error);
       });
   };
+  if (spinner) {
+    return <progress className="progress w-full"></progress>;
+  }
 
   return (
     <div className="hero min-h-screen">

@@ -5,7 +5,7 @@ const MyReviewRow = ({ review, handleDelete }) => {
   const [product, setProduct] = useState({});
   const { _id, email, message, name, serviceId } = review;
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${serviceId}`)
+    fetch(`https://farid-kitchen-server-site.vercel.app/services/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [serviceId]);

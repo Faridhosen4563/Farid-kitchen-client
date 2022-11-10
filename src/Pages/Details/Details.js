@@ -33,7 +33,7 @@ const Details = () => {
       message,
     };
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://farid-kitchen-server-site.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -45,17 +45,15 @@ const Details = () => {
         if (data.acknowledged) {
           toast.success("Review add successfully");
           form.reset();
-          console.log(data);
         }
         setInsetId(data.insertedId);
       });
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews/${_id}`)
+    fetch(`https://farid-kitchen-server-site.vercel.app/reviews/${_id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setReviews(data);
       });
   }, [insetId]);

@@ -10,14 +10,17 @@ const Update = () => {
   const handleUpdate = (event) => {
     event.preventDefault();
 
-    fetch(`http://localhost:5000/reviews/${review._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("kitchenToken")}`,
-      },
-      body: JSON.stringify(updateReview),
-    })
+    fetch(
+      `https://farid-kitchen-server-site.vercel.app/reviews/${review._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("kitchenToken")}`,
+        },
+        body: JSON.stringify(updateReview),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
